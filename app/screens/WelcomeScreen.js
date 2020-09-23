@@ -1,14 +1,20 @@
 import React from 'react';
-import { Image, ImageBackground, StyleSheet, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+
+
 
 function WelcomeScreen(props) {
     return (
         <ImageBackground
             style={styles.background}
-            source={require('../assets/backgroundmain.jpg')}>
-            <Image
-                styles={styles.logo}
-                source={require('../assets/logo1-removebg-preview.png')} />
+            source={require('../assets/cool.png')}>
+
+            <View style={styles.logoContainer}>
+                <Image
+                    style={styles.logo}
+                    source={require('../assets/logo1-removebg-preview.png')} />
+            </View>
+
             <View style={styles.loginButton}></View>
             <View style={styles.registerButton}></View>
         </ImageBackground>
@@ -25,19 +31,23 @@ const styles = StyleSheet.create({
     loginButton: {
         width: '100%',
         height: 70,
-        backgroundColor: '#03fcf4'
+        backgroundColor: '#ad0a9d'
     },
     registerButton: {
         width: '100%',
         height: 70,
-        backgroundColor: '#b603fc'
+        backgroundColor: '#394187'
     },
     logo: {
-        width: 30,
-        height: 30,
+        width: 200,
+        height: 200,
         position: "absolute",
         top: 20,
-
+    },
+    logoContainer: {
+        position: "absolute",
+        top: 50,
+        alignItems: "center"
     }
 })
 
